@@ -1,0 +1,1 @@
+ALTER TABLE `systems_info` ADD `isActive` integer DEFAULT true;

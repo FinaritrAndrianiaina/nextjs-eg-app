@@ -1,0 +1,2 @@
+-- Custom SQL migration file, put your code below! --
+INSERT INTO `systems_info` (`version`, `appName`, `description`, `preferences`) VALUES ('0.0.1', 'Drizzle', 'Drizzle is a simple database migration tool for MySQL.', NULL);

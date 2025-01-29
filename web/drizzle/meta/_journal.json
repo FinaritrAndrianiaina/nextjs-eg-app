@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1738050143302,
+      "tag": "0000_dear_mulholland_black",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1738050702393,
+      "tag": "0001_bump_version_v0.0.1",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1738064614962,
+      "tag": "0002_robust_raza",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1738170676393,
+      "tag": "0003_striped_doctor_strange",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1738170814609,
+      "tag": "0004_stale_mikhail_rasputin",
+      "breakpoints": true
+    }
+  ]
+}
