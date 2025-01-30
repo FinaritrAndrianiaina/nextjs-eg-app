@@ -31,6 +31,35 @@ export function getDefaultValues(
   } else if (schema instanceof z.ZodOptional) {
     return _defaultValue !== undefined ? _defaultValue : undefined;
   } else {
-    return _defaultValue ?? null;
+    return _defaultValue ?? undefined;
+  }
+}
+
+export function unwrapZodType(type: z.ZodTypeAny): z.ZodTypeAny {
+  while (
+    type instanceof z.ZodOptional ||
+    type instanceof z.ZodNullable ||
+    type instanceof z.ZodReadonly ||
+    type instanceof z.ZodPromise
+  ) {
+    type = type.unwrap();
+  }
+  return type;
+}
+
+export function zodAddMeta<T extends z.ZodTypeAny>(
+  schema: T,
+  metadata: Record<string, any>
+): T {
+  return schema.describe(JSON.stringify(metadata));
+}
+
+export function zodParseMeta<T extends z.ZodTypeAny>(
+  schema: T
+): Record<string, any> | undefined {
+  try {
+    return schema.description ? JSON.parse(schema.description) : undefined;
+  } catch {
+    return undefined;
   }
 }
